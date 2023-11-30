@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import Logo from '../../assets/logo.gif'
 import './Sidebar.css'
 
 const Sidebar = () => {
