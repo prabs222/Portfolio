@@ -28,9 +28,10 @@ const Portfolio = () => {
         {Items.map((elem) => {
           const {id,image,title,category,link} = elem;
           return (
+            <div style={{display:"flex", flexDirection:"column"}}>
             <div className="work__card" key={id}>
               <div className="work__thumbnail">
-                <img src={image} alt="" className="work__img" />
+                <img src={image} alt="" height={250} className="work__img" />
                 <div className="work__mask"></div>
               </div>
 
@@ -39,6 +40,12 @@ const Portfolio = () => {
               <a href={link} className='work__button' target='_blank'  rel="noreferrer">
                 <i className='icon-link work__button-icon'></i>
               </a>
+            </div>
+            <a href={link}  target='_blank'  rel="noreferrer">
+              <h3 style={{paddingTop: "1rem", paddingBottom: "0.3rem",textAlign: "center"}} >{title}</h3>
+            </a>
+
+              <hr />
             </div>
           )
         })}
